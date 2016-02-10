@@ -32,5 +32,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     }
 
-   
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button_1:
+                startActivity(new Intent(this, Activity_Noticias.class));
+                break;
+            case R.id.button_2:
+                Toast texto2 = Toast.makeText(getBaseContext(), "Boton 2 pulsado!",
+                        Toast.LENGTH_LONG);
+                texto2.show();
+                break;
+            case R.id.button_3:
+                Toast texto3 = Toast.makeText(getBaseContext(), "Boton 3 pulsado!",
+                        Toast.LENGTH_LONG);
+                texto3.show();
+                break;
+        }
+    }
+
 }
